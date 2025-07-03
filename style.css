@@ -72,3 +72,34 @@ footer {
     font-family: "Chakra Petch", sans-serif;
     margin-top: 100px;
 }
+
+/* Media Query para dispositivos com largura menor que 768px (celulares e tablets) */
+@media (max-width: 768px) {
+    .categoria-videos {
+        grid-template-columns: 1fr; /* 1 vídeo por linha em telas pequenas */
+        gap: 15px; /* Reduzindo o espaço entre os vídeos em telas menores */
+    }
+
+    .chamada {
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        padding-top: 50px; /* Ajuste do padding para melhor visualização em dispositivos móveis */
+        padding-bottom: 50px;
+    }
+
+    .chamada-texto {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px; /* Reduzindo o tamanho da fonte em telas menores */
+    }
+
+    p {
+        font-size: 18px; /* Reduzindo o tamanho da fonte em telas menores */
+    }
+
+    footer {
+        padding: 15px; /* Ajustando o padding do footer para telas pequenas */
+    }
+}
