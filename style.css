@@ -37,30 +37,25 @@ p {
 }
 
 .categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px 0;
-}
-
-.categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
+    display: grid; /* Usando grid para organizar os vídeos em linhas e colunas */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanho igual */
+    gap: 20px; /* Espaço entre os vídeos */
+    padding: 20px 0;
 }
 
 .categoria-videos img {
-    opacity: 0.7; 
-    height: 200px;
+    opacity: 0.7;
+    width: 100%; /* Garantindo que a imagem ocupe toda a largura da célula da grid */
+    height: auto; /* A altura será ajustada automaticamente */
     object-fit: cover; 
-    border-radius: 8px; 
-    transition: transform 0.3s ease, opacity 0.3s ease; 
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .categoria-videos img:hover {
     opacity: 1;
     border: 3px solid green;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .categoria h2 {
